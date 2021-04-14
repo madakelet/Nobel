@@ -40,6 +40,17 @@ namespace Nobel
 
             Console.WriteLine($"4. feladat: {dijasok[j].Keresztnev} {dijasok[j].Vezeteknev}");
 
+            //5
+
+            Console.WriteLine("5. feladat: ");
+            foreach (Dijazott dijas in dijasok)
+            {
+                if(dijas.Vezeteknev.Contains("Curie"))
+                {
+                    Console.WriteLine($"\t{dijas.Evszam}: {dijas.Keresztnev} {dijas.Vezeteknev} {dijas.Tipus}");
+                }
+            }
+
 
 
             Console.ReadLine();
