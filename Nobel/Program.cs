@@ -58,9 +58,31 @@ namespace Nobel
             {
                 if(dijas.Vezeteknev.Contains("Curie"))
                 {
-                    Console.WriteLine($"\t{dijas.Evszam}: {dijas.Keresztnev} {dijas.Vezeteknev} {dijas.Tipus}");
+                    Console.WriteLine($"\t{dijas.Evszam}: {dijas.Keresztnev} {dijas.Vezeteknev} ({dijas.Tipus})");
                 }
             }
+
+            //7
+
+            Dictionary<string, int> dijtipusDarab = new Dictionary<string, int>();
+            foreach (Dijazott dijas in dijasok)
+            {
+                string kulcs = dijas.Tipus;
+                if(dijtipusDarab.ContainsKey(kulcs))
+                {
+                    dijtipusDarab[kulcs]++;
+                }
+                else
+                {
+                    dijtipusDarab.Add(kulcs, 1);
+                }
+            }
+
+            foreach (KeyValuePair<string,int> item in dijtipusDarab)
+            {
+                Console.WriteLine($"\t{item.Key}: {item.Value} db");
+            }
+
 
 
 
