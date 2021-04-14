@@ -20,7 +20,15 @@ namespace Nobel
                 dijasok.Add(new Dijazott(sor));
             }
 
+            //3
 
+            int hossz = dijasok.Count;
+            int j = 0;
+            while(j < hossz && !(dijasok[j].Keresztnev == "Arthur B." && dijasok[j].Vezeteknev == "McDonald"))
+            {
+                j++;
+            }
+            Console.WriteLine($"3. feladat: {dijasok[j].Tipus}");
 
             Console.ReadLine();
         }
