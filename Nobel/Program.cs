@@ -64,6 +64,7 @@ namespace Nobel
 
             //7
 
+            Console.WriteLine("7.feladat: ");
             Dictionary<string, int> dijtipusDarab = new Dictionary<string, int>();
             foreach (Dijazott dijas in dijasok)
             {
@@ -83,8 +84,24 @@ namespace Nobel
                 Console.WriteLine($"\t{item.Key}: {item.Value} db");
             }
 
+            //8
 
+            List<string> orvosi = new List<string>();
 
+            foreach (Dijazott dijas in dijasok)
+            {
+                string sor = "";
+                if(dijas.Tipus == "orvosi")
+                {
+                    sor += dijas.Evszam;
+                    sor += " :";
+                    sor += dijas.Keresztnev + " ";
+                    sor += dijas.Vezeteknev;
+                    orvosi.Add(sor);
+                }
+
+            }
+            File.WriteAllLines("orvosi.txt", orvosi, Encoding.UTF8);
 
             Console.ReadLine();
         }
