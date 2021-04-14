@@ -30,6 +30,18 @@ namespace Nobel
             }
             Console.WriteLine($"3. feladat: {dijasok[j].Tipus}");
 
+            //4
+
+            j = 0;
+            while (j < hossz && !(dijasok[j].Evszam == 2017 && dijasok[j].Tipus == "irodalmi"))
+            {
+                j++;
+            }
+
+            Console.WriteLine($"4. feladat: {dijasok[j].Keresztnev} {dijasok[j].Vezeteknev}");
+
+
+
             Console.ReadLine();
         }
     }
