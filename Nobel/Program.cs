@@ -42,7 +42,18 @@ namespace Nobel
 
             //5
 
-            Console.WriteLine("5. feladat: ");
+            Console.WriteLine("5. feladat:");
+            foreach (Dijazott dijas in dijasok)
+            {
+                if(dijas.Evszam > 1989 && dijas.Vezeteknev == "")
+                {
+                    Console.WriteLine($"\t{dijas.Evszam}: {dijas.Keresztnev}");
+                }
+            }
+
+            //6
+
+            Console.WriteLine("6. feladat: ");
             foreach (Dijazott dijas in dijasok)
             {
                 if(dijas.Vezeteknev.Contains("Curie"))
